@@ -2,11 +2,13 @@ void setup()
 {
   
   size(1000, 800);
-  background(0);
+  smooth();
 
 }
 
 void draw()
 {
+  
+  background(0);
   
 }
