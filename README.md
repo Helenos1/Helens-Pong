@@ -1,3 +1,3 @@
 # Helens-Pong
 First year programming assignment.
-Test.
+Pong using classes.
