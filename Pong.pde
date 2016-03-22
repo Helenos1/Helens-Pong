@@ -1,4 +1,7 @@
 Player1 player1;
+int ballX;
+int ballY;
+int ballW;
 
 void setup()
 {
@@ -7,6 +10,10 @@ void setup()
   smooth();
   
   player1 = new Player1();
+  
+  ballX = width/2;
+  ballY = height/2;
+  ballW = 20;
   
 
 }
@@ -18,4 +25,8 @@ void draw()
   stroke(255);
   fill(255);
   
+  ellipse(ballX, ballY, ballW, ballW);
+  
 }
+
+
