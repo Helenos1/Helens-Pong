@@ -1,8 +1,13 @@
+Player1 player1;
+
 void setup()
 {
   
   size(1000, 800);
   smooth();
+  
+  player1 = new Player1();
+  
 
 }
 
