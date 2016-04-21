@@ -1,9 +1,8 @@
 class Player1
 {
   
-  PVector pos;
-  PVector forward;
   float Player1Speed;
+  float 
  
  
  //CONSTRUCTOR
@@ -15,6 +14,22 @@ class Player1
    
    
  }*/
+ 
+ void update()
+{
+   
+  
+  
+}
+ 
+ void render()
+{
+   stroke(255);
+   rect();
+  
+  
+}
+ 
   
 }
 
