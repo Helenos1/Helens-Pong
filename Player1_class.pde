@@ -1,19 +1,21 @@
 class Player1
 {
   
-  float Player1Speed;
-  float 
+  float player1Speed;
+  float playerHeight;
+  float playerWidth;
+  float playerX;
+  float playerY;
  
- 
- //CONSTRUCTOR
- /*Player1(float x, float y, float w)
+ Player1()
  {
   
-  pos = new PVector(x, y);
-  forward = new PVector(0, -1);
+  playerX = 20;
+  playerY = height / 2;
+  playerHeight = 150;
+  playerWidth = 30;
    
-   
- }*/
+ }
  
  void update()
 {
@@ -25,7 +27,7 @@ class Player1
  void render()
 {
    stroke(255);
-   rect();
+   rect(playerX, playerY, playerWidth, playerHeight);
   
   
 }

@@ -38,7 +38,8 @@ void draw()
   background(0);
   stroke(255);
   fill(255);
-  
+  player1.update();
+  player1.render();
   ellipse(ballX, ballY, ballW, ballW);
   
 }
