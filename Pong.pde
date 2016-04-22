@@ -2,7 +2,7 @@ Player1 player1;
 int ballX;
 int ballY;
 int ballW;
-
+boolean w = false, s = false;
 void setup()
 {
   
@@ -21,6 +21,14 @@ void setup()
 void keyPressed()
 {
  
+  if (key == 'w')
+  {
+    w = true;
+  }
+  if (key == 's' )
+  {
+    s = true;
+  }
  
   
 }
@@ -28,7 +36,14 @@ void keyPressed()
 void keyReleased()
 {
   
-
+if (key=='w')
+  {
+    w = false;
+  }
+  if (key=='s')
+  {
+    s = false;
+  }
   
 }
 
