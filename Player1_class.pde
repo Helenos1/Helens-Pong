@@ -1,7 +1,7 @@
 class Player1
 {
   
-  float player1Speed;
+  //float player1Speed;
   float playerHeight;
   float playerWidth;
   float playerX;
