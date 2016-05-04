@@ -63,7 +63,8 @@ class Ball
   
   if(ballX - (ballW / 2) < player1.playerX + (player1.playerWidth)
   && ballY < player1.playerY + player1.playerHeight
-  && ballY + (ballW / 2) > player1.playerY)
+  && ballY + (ballW / 2) > player1.playerY
+  && ballSpeedX < 0)
   {
    
    ballSpeedX = -ballSpeedX; 
@@ -72,9 +73,10 @@ class Ball
   
   //  Player 2
   
-  if((ballX + ballW) > player2.player2X 
+  if((ballX) > player2.player2X 
   && (ballY + ballW) > player2.player2Y 
-  && ballY < (player2.player2Y + player2.player2Height))
+  && ballY < (player2.player2Y + player2.player2Height)
+  && ballSpeedX > 0)
   {
     
    ballSpeedX = -ballSpeedX; 
