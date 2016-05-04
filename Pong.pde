@@ -36,6 +36,16 @@ void keyPressed()
     s = true;
   }
   
+  if (key == 'UP')
+  {
+    UP = true;
+  }
+  
+  if (key == 'DOWN' )
+  {
+    DOWN = true;
+  }
+  
 }
 
 void keyReleased()
@@ -49,6 +59,16 @@ void keyReleased()
   if (key=='s')
   {
     s = false;
+  }
+  
+  if (key=='w')
+  {
+    UP = false;
+  }
+  
+  if (key=='s')
+  {
+    DOWN = false;
   }
   
 }
