@@ -22,6 +22,7 @@ class Ball
   ballX = ballX + ballSpeedX;
   ballY = ballY + ballSpeedY;
   
+  
   //  Ball reactions with walls
   
   if(ballY > height - (ballW / 2))  // bottom wall
@@ -38,7 +39,7 @@ class Ball
     
   }
   
-  if( ballX > width - (ballW / 2))  // right wall (resets to centre)
+  if( ballX > width + (ballW / 2))  // right wall (resets to centre)
   {
   
     ballX = (width / 2) - (ballW / 2);
@@ -47,13 +48,37 @@ class Ball
  
   }
   
-  if(ballX < (0 + ballW / 2))  // left wall (resets to centre)
+  if(ballX < (0 - ballW / 2))  // left wall (resets to centre)
   {
   
    ballSpeedX = -ballSpeedX;  
    ballX = (width / 2) - (ballW / 2);
    ballY = (height / 2) - (ballW / 2); 
  
+  }
+  
+     //  Ball interactions with paddles
+  
+  //  Player 1
+  
+  if(ballX - (ballW / 2) < player1.playerX + (player1.playerWidth)
+  && ballY < player1.playerY + player1.playerHeight
+  && ballY + (ballW / 2) > player1.playerY)
+  {
+   
+   ballSpeedX = -ballSpeedX; 
+   
+  }
+  
+  //  Player 2
+  
+  if((ballX + ballW) > player2.player2X 
+  && (ballY + ballW) > player2.player2Y 
+  && ballY < (player2.player2Y + player2.player2Height))
+  {
+    
+   ballSpeedX = -ballSpeedX; 
+    
   }
 
   }
