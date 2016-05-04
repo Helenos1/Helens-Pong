@@ -1,8 +1,11 @@
 Player1 player1;
+Player2 player2;
+
 int ballX;
 int ballY;
 int ballW;
 boolean w = false, s = false;
+
 void setup()
 {
   
@@ -10,6 +13,8 @@ void setup()
   smooth();
   
   player1 = new Player1();
+  
+  player2 = new Player2();
   
   ballX = width/2;
   ballY = height/2;
