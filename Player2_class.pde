@@ -20,13 +20,13 @@ class Player2
  void update()
  {
    
-   if (o == true && player2Y > 0)
+   if (up == true && player2Y > 0)
     {
      player2Y -= 5;
     }
     
     
-   if (l == true && player2Y < height - 150)
+   if (down == true && player2Y < height - 150)
     {
       player2Y += 5;
     }  

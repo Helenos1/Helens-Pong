@@ -2,7 +2,7 @@ Player1 player1;
 Player2 player2;
 Ball ball;
 
-boolean w = false, s = false, o = false, l = false;
+boolean w = false, s = false, up = false, down = false;
 
 void setup()
 {
@@ -36,17 +36,17 @@ void keyPressed()
     
   }
   
-  if (key == 'o')
+  if (keyCode == UP)
   {
     
-    o = true;
+    up = true;
     
   }
   
-  if (key == 'l')
+  if (keyCode == DOWN)
   {
     
-    l = true;
+    down = true;
     
   }
   
@@ -69,17 +69,17 @@ void keyReleased()
     
   }
   
-  if (key == 'o')
+  if (keyCode == UP)
   {
     
-    o = false;
+    up = false;
     
   }
   
-  if (key == 'l')
+  if (keyCode == DOWN)
   {
     
-    l = false;
+    down = false;
     
   }
   
