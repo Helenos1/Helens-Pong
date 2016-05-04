@@ -4,7 +4,7 @@ Player2 player2;
 int ballX;
 int ballY;
 int ballW;
-boolean w = false, s = false;
+boolean w = false, s = false, UP = false, DOWN = false;
 
 void setup()
 {
@@ -30,21 +30,22 @@ void keyPressed()
   {
     w = true;
   }
+  
   if (key == 's' )
   {
     s = true;
   }
- 
   
 }
 
 void keyReleased()
 {
   
-if (key=='w')
+  if (key=='w')
   {
     w = false;
   }
+  
   if (key=='s')
   {
     s = false;
@@ -61,6 +62,8 @@ void draw()
   player1.update();
   player1.render();
   ellipse(ballX, ballY, ballW, ballW);
+  player2.update();
+  player2.render();
   
 }
 

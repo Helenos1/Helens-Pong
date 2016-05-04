@@ -11,14 +11,14 @@ class Player1
  {
   
   playerX = 20;
-  playerY = height / 2;
+  playerY = height * 0.4;
   playerHeight = 150;
   playerWidth = 30;
    
  }
  
  void update()
-{
+ {
   
    if (w == true && playerY > 0)
     {
@@ -31,15 +31,15 @@ class Player1
       playerY += 5;
     }
     
-}
+ }
  
  void render()
-{
+ {
+   
    stroke(255);
    rect(playerX, playerY, playerWidth, playerHeight);
   
-  
-}
+ }
  
   
 }
