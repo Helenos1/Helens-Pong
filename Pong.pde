@@ -1,8 +1,17 @@
 Player1 player1;
 Player2 player2;
 Ball ball;
-
+import ddf.minim.*; //sound library
+ 
 boolean w = false, s = false, up = false, down = false;
+
+// SOUND FX
+
+  AudioSnippet paddle; //  paddle ball
+  Minim minimB; //  paddle ball
+  
+  AudioSnippet wall; //  wall bounce
+  Minim minimW; //  wall bounce
 
 void setup()
 {
@@ -15,7 +24,12 @@ void setup()
   player2 = new Player2();
   
   ball = new Ball();
+  
+  minimB = new Minim(this);
+  paddle = minimB.loadSnippet("PaddleBall.wav");
 
+  minimW = new Minim(this);
+  wall = minimW.loadSnippet("WallBall.wav");
 
 }
 

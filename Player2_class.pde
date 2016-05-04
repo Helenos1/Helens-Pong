@@ -22,13 +22,13 @@ class Player2
    
    if (up == true && player2Y > 0)
     {
-     player2Y -= 5;
+     player2Y -= 6;
     }
     
     
    if (down == true && player2Y < height - 150)
     {
-      player2Y += 5;
+      player2Y += 6;
     }  
     
  }

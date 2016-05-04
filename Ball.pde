@@ -4,8 +4,8 @@ class Ball
   int ballX;
   int ballY;
   int ballW;
-  int ballSpeedX = 3;
-  int ballSpeedY = 5;
+  int ballSpeedX = 4;
+  int ballSpeedY = 6;
 
   Ball()
   {
@@ -29,6 +29,8 @@ class Ball
   {
     
     ballSpeedY = -ballSpeedY;
+    wall.rewind();
+    wall.play();
     
   }
     
@@ -36,6 +38,8 @@ class Ball
   {
     
     ballSpeedY = -ballSpeedY;
+    wall.rewind();
+    wall.play();
     
   }
   
@@ -67,6 +71,8 @@ class Ball
   && ballSpeedX < 0)
   {
    
+   paddle.rewind();
+   paddle.play();
    ballSpeedX = -ballSpeedX; 
    
   }
@@ -78,7 +84,9 @@ class Ball
   && ballY < (player2.player2Y + player2.player2Height)
   && ballSpeedX > 0)
   {
-    
+   
+   paddle.rewind();
+   paddle.play(); 
    ballSpeedX = -ballSpeedX; 
     
   }

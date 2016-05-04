@@ -22,13 +22,13 @@ class Player1
   
    if (w == true && playerY > 0)  // moves the player and stops the player going off the top of the screen
     {
-     playerY -= 5;
+     playerY -= 6;
     }
     
     
    if (s == true && playerY < height - 150)  // moves the player and stops the player going past the bottom of the screen
     {
-      playerY += 5;
+      playerY += 6;
     }
     
  }
