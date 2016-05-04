@@ -4,7 +4,7 @@ Player2 player2;
 int ballX;
 int ballY;
 int ballW;
-boolean w = false, s = false, UP = false, DOWN = false;
+boolean w = false, s = false, o = false, l = false;
 
 void setup()
 {
@@ -28,22 +28,30 @@ void keyPressed()
  
   if (key == 'w')
   {
+    
     w = true;
+    
   }
   
   if (key == 's' )
   {
+    
     s = true;
+    
   }
   
-  if (key == 'UP')
+  if (key == 'o')
   {
-    UP = true;
+    
+    o = true;
+    
   }
   
-  if (key == 'DOWN' )
+  if (key == 'l')
   {
-    DOWN = true;
+    
+    l = true;
+    
   }
   
 }
@@ -51,24 +59,32 @@ void keyPressed()
 void keyReleased()
 {
   
-  if (key=='w')
+  if (key == 'w')
   {
+    
     w = false;
+    
   }
   
-  if (key=='s')
+  if (key == 's')
   {
+    
     s = false;
+    
   }
   
-  if (key=='w')
+  if (key == 'o')
   {
-    UP = false;
+    
+    o = false;
+    
   }
   
-  if (key=='s')
+  if (key == 'l')
   {
-    DOWN = false;
+    
+    l = false;
+    
   }
   
 }
@@ -86,5 +102,3 @@ void draw()
   player2.render();
   
 }
-
-
