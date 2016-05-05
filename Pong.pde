@@ -1,9 +1,20 @@
 Player1 player1;
 Player2 player2;
 Ball ball;
+
+PImage paddleImage;
+PImage bg;
+
 import ddf.minim.*; //sound library
  
 boolean w = false, s = false, up = false, down = false;
+
+//  PLAYER LIVES
+
+int lives2 = 3;
+int lives = 3;
+PFont font;
+color c = 255;
 
 // SOUND FX
 
@@ -18,6 +29,7 @@ void setup()
   
   size(1000, 800);
   smooth();
+  textAlign(CENTER, CENTER); //  centres the text in text mode
   
   player1 = new Player1();
   
@@ -26,10 +38,13 @@ void setup()
   ball = new Ball();
   
   minimB = new Minim(this);
-  paddle = minimB.loadSnippet("PaddleBall.wav");
+  paddle = minimB.loadSnippet("PaddleBall.wav");  //  activate sound
 
   minimW = new Minim(this);
   wall = minimW.loadSnippet("WallBall.wav");
+  
+  paddleImage = loadImage("Paddle.png");  //  activate image
+  bg = loadImage("BG.png");
 
 }
 
@@ -102,7 +117,7 @@ void keyReleased()
 void draw()
 {
   
-  background(0);
+  background(bg);
   stroke(255);
   fill(255);
   
@@ -114,5 +129,7 @@ void draw()
   
   ball.update();
   ball.render();
+  
+  lives();
   
 }

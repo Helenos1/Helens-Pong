@@ -49,6 +49,7 @@ class Ball
     ballX = (width / 2) - (ballW / 2);
     ballY = (height / 2) - (ballW / 2); 
     ballSpeedX = -ballSpeedX;
+    lives2 = lives2 - 1;
  
   }
   
@@ -58,6 +59,7 @@ class Ball
    ballSpeedX = -ballSpeedX;  
    ballX = (width / 2) - (ballW / 2);
    ballY = (height / 2) - (ballW / 2); 
+   lives = lives - 1;
  
   }
   

@@ -36,8 +36,8 @@ class Player2
  void render()
  {
    
-   stroke(255);
    rect(player2X, player2Y, player2Width, player2Height);
+   image(paddleImage, player2X, player2Y);
    
  }
   
